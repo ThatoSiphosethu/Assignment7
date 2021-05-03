@@ -1,0 +1,32 @@
+[
+  {
+    "MovieId": 1,
+    "Title": "Toys",
+    "Genres": "Kids"
+  },
+  {
+    "MovieId": 2,
+    "Title": "Thato",
+    "Genres": "Action"
+  },
+  {
+    "MovieId": 3,
+    "Title": "Test 1",
+    "Genres": "Actions"
+  },
+  {
+    "MovieId": 4,
+    "Title": "test 2",
+    "Genres": "Comics"
+  },
+  {
+    "MovieId": 5,
+    "Title": "Hulk",
+    "Genres": "Comics"
+  },
+  {
+    "MovieId": 6,
+    "Title": "gfgfdu",
+    "Genres": "hugbojf"
+  }
+]
