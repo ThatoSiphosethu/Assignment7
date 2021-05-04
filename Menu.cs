@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using ConsoleTables;
 
 namespace Assignment7
@@ -27,6 +28,7 @@ namespace Assignment7
             System.Console.WriteLine("Choose an option/n");
             System.Console.WriteLine("1. Add movie");
             System.Console.WriteLine("2. Display movies");
+            System.Console.WriteLine("3. Search movies");
             string choice = System.Console.ReadLine();
 
             switch(choice)
@@ -38,7 +40,21 @@ namespace Assignment7
                 case "2":
                 ConsoleTable.From<Movie>(_context.ReadMovies()).Write();
                 break;
+                case "3":
+                var fileSearch = SearchOption();
+                foreach (var movie in fileSearch)
+                {
+                    System.Console.WriteLine($"Result: {movie.MovieId} - {movie.Title} - {movie.Genres}");
+                }
+                break;
             }
+        }
+        public List<Movie> SearchOption()
+        {
+            System.Console.WriteLine("Search by title");
+            var movieName = Console.ReadLine();
+            var searchMovie = _context.FileSearch(movieName);
+            return searchMovie;
         }
     }
 }

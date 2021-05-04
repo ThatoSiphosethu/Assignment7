@@ -36,5 +36,14 @@ namespace Assignment7
             }
             return JsonConvert.DeserializeObject<List<Movie>>(listOfMovies);
         }
+
+        public List<Movie> Search(string title)
+        {   
+            var searchMovie = Read();
+            var movies = searchMovie.Where(movie=>movie.Title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
+            return movies;
+        }
+
+        
     }
 }

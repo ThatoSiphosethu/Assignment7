@@ -6,5 +6,7 @@ namespace Assignment7
     {
          void AddMovie(Movie movie);
          List<Movie> ReadMovies();
+
+         List<Movie> FileSearch(string title);
     }
 }

@@ -15,6 +15,11 @@ namespace Assignment7
             _fileRepository.Add(movie);
         }
 
+        public List<Movie> FileSearch(string title)
+        {
+            return _fileRepository.Search(title);
+        }
+
         public List<Movie> ReadMovies()
         {
            return _fileRepository.Read();
